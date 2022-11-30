@@ -10,7 +10,7 @@ use App\Bitrix24\Bitrix24API;
 use App\Bitrix24\Bitrix24APIException;
 
 try {
-    $bx24 = new Bitrix24API('https://b24-fkipjh.bitrix24.ru/rest/1/czxo2kvh99g0s67r/');
+    $bx24 = new Bitrix24API('https://b24-iqydwq.bitrix24.ru/rest/1/5rnc74o2zy1bj5j3/');
 
     $current_date = new DateTime();
     $date_for_deal_end = clone($current_date);
