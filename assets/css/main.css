@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+form h2 {
+    margin-bottom: 20px;
+}
+
+.form_item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.application, .delivery_warehouse{
+    max-width: 200px;
+}
+
+.category {
+    row-gap: 5px;
+}
+
+.form_item label input{
+  vertical-align: middle;
+}
+
+.structure_application {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin-bottom: 40px;
+}
+
+.comp_head span{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+.comp_head {
+  grid-column: 1/3;
+}
+
+.comp_head, .comp_row {
+  display: grid;
+  grid-template-columns: repeat(5, 185px);
+}
+
+.control_rows button {
+  background: blue;
+  color: white;
+  width: 25px;
+  border: none;
+}
+
+.form_item textarea {
+  width: 50%;
+}
+
+.submit {
+  display: block;
+}
+
+
+@media (max-width: 1439px) {
+  .comp_head, .comp_row {
+    grid-template-columns: repeat(5, 155px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .comp_head, .comp_row {
+    grid-template-columns: repeat(5, 125px);
+  }
+
+  .comp_head span{
+    font-size: 14px;
+}
+}
+
+@media (max-width: 767px) {
+  .structure_application {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .comp_head {
+    grid-column: 1;
+  }
+
+  .comp_head span{
+    text-align: start;
+  }
+
+  .comp_head, .comp_row {
+    grid-template-columns: 125px;
+    grid-template-rows: repeat(5, 21px);
+    grid-row-gap: 5px;
+  }
+
+  .form_item textarea {
+    width: auto;
+  }
+}
